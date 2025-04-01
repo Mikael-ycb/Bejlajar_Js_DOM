@@ -7,49 +7,58 @@
 const pBaru = document.createElement('p');//membuat element paragraf yang ada pada document dan menyimpannya ke variabel pBaru
 const pBaru2 = document.createElement('p');//membuat element paragraf yang ada pada document dan menyimpannya ke variabel pBaru2
 const hBaru1 = document.createElement('h1');//membuat element H! yang ada pada document dan menyimpannya ke variabel hBaru1
+const h2lagi = document.createElement('h2');
 
 // --> document.createTextNode()
 // Buat teks "paragraf baru"
 const textPBaru = document.createTextNode('paragraf baru');//membuat sebuah teks node yang ada pada document dan disimpan pada variable textPBaru
 const textBaru2 = document.createTextNode('Mikael ganteng');
 const textBaru3 = document.createTextNode('Sang Pendekar');
+const textBaru4 = document.createTextNode('mikael lagi ni'); 
 
 // --> node.appendChild()
 // Simpan teks ke dalam elemen <p>
 pBaru.appendChild(textPBaru);//menyimpan element textPBaru kevariable pBaru
 pBaru2.appendChild(textBaru2);
 hBaru1.appendChild(textBaru3);
+h2lagi.appendChild(textBaru4);
 
 // Simpan <p> baru di akhir section A
 const sectionA = document.getElementById('a');//memilih penempatan di section a
 sectionA.appendChild(pBaru);//menyimpan variable pBaru ke section a
 sectionA.appendChild(pBaru2);
 sectionA.appendChild(hBaru1);
+sectionA.appendChild(h2lagi)
 
 //=========================================================================================================
 
 // Buat elemen <li> baru
 const liBaru = document.createElement('li');//membuat element li yang ada pada document dan menyimpannya ke variabel liBaru
 const liBaru2 = document.createElement('li');
+const libaru3 = document.createElement('li');
 
 // Buat teks "Item Baru"
 const teksLiBaru = document.createTextNode('Item Baru');//membuat teks node "item Baru" pada document dan menyimpan ke variable teksLiBaru
 const teksLiBaru2 = document.createTextNode('Aku ganteng');
+const teksLibaru3 = document.createTextNode('hanya cinta dan malam');
 
 // Simpan teks ke dalam elemen <li>
 liBaru.appendChild(teksLiBaru);//menyimpan variabel teksBaru pada variabel liBaru
 liBaru2.appendChild(teksLiBaru2);
+libaru3.appendChild(teksLibaru3);
 
 // --> node.insertBefore()
 // Pilih elemen <ul> dalam section B
 const ul = document.querySelector('section#b ul');// memilih ul section b dan disimpan pada variabe ul
 // Pilih elemen <li> kedua dalam <ul>
 const li2 = ul.querySelector('li:nth-child(2)');//memilih penempatan pada anak ke 2 dari lu dan minyimpan pada variable li2
-const li3 = ul.querySelector('li:nth-child(3)')
+const li3 = ul.querySelector('li:nth-child(3)');
+const li4 = ul.querySelector('li:nth-child(4)');
 
 // Sisipkan <li> baru sebelum <li> kedua
 ul.insertBefore(liBaru, li2);//variable liBaru ditaroh ke li2(urutan 2) dan dimasukkan pada lu
 ul.insertBefore(liBaru2, li3);
+ul.insertBefore(libaru3, li2);
 
 //=======================================================================================
 
